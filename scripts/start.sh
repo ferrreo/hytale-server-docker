@@ -92,7 +92,7 @@ if [ "${ACCEPT_EARLY_PLUGINS}" = "true" ]; then
 fi
 
 if [ "${ENABLE_BACKUPS}" = "true" ]; then --backup-dir ${BACKUP_DIR}"
-    LogInfo "Automatic backups enabled (every ${BACKUP_FREQUENCY} minutes to ${BACKUP_DIR}UENCY}"
+    LogInfo "Automatic backups enabled (every ${BACKUP_FREQUENCY} minutes to ${BACKUP_DIR})"
     LogInfo "Automatic backups enabled (every ${BACKUP_FREQUENCY} minutes)"
 fi
 
