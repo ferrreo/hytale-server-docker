@@ -100,8 +100,8 @@ You can use the following values to change the settings of the server on boot.
 
 | Variable               | Default              | Description                                                                           |
 |------------------------|----------------------|---------------------------------------------------------------------------------------|
-| PUID                   | 1001                 | User ID for file permissions                                                          |
-| PGID                   | 1001                 | Group ID for file permissions                                                         |
+| PUID                   | 1000                 | User ID for file permissions                                                          |
+| PGID                   | 1000                 | Group ID for file permissions                                                         |
 | SERVER_NAME            | hytale-server-docker | Name of the server                                                                    |
 | DEFAULT_PORT           | 5520                 | The port the server listens on (UDP only)                            |
 | MAX_PLAYERS            | 20                   | Maximum number of players allowed on the server                                       |

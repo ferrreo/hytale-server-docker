@@ -5,9 +5,9 @@ source "/home/hytale/server/functions.sh"
 LogAction "Set file permissions"
 
 if [ -z "${PUID}" ] || [ -z "${PGID}" ]; then
-    LogWarn "PUID and PGID not set. Using default values (1001)."
-    PUID=1001
-    PGID=1001
+    LogWarn "PUID and PGID not set. Using default values (1000)."
+    PUID=1000
+    PGID=1000
 fi
    
 usermod -o -u "${PUID}" hytale

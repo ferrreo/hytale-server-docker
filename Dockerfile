@@ -18,8 +18,9 @@ LABEL maintainer="support@indifferentbroccoli.com" \
       dockerhub="https://hub.docker.com/r/indifferentbroccoli/hytale-server-docker"
 
 # Create user/group
-RUN groupadd -g 1001 hytale && \
-    useradd -u 1001 -g 1001 -m -d /home/hytale -s /bin/bash hytale
+RUN userdel -r ubuntu 2>/dev/null || true && \
+    groupadd -g 1000 hytale && \
+    useradd -u 1000 -g 1000 -m -d /home/hytale -s /bin/bash hytale
 
 ENV HOME=/home/hytale \
     CONFIG_DIR=/hytale-config \
@@ -44,7 +45,7 @@ COPY branding /branding
 
 RUN mkdir -p /home/hytale/server-files && \
     chmod +x /home/hytale/server/*.sh && \
-    chown -R 1001:1001 /home/hytale
+    chown -R 1000:1000 /home/hytale
 
 WORKDIR /home/hytale/server
 
