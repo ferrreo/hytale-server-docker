@@ -7,8 +7,22 @@ services:
     stop_grace_period: 30s
     ports:
       - 5520:5520/udp
-    env_file:
-      - .env.example
+    environment:
+      PUID=1001
+      PGID=1001
+      SERVER_NAME=ferreo-server
+      DEFAULT_PORT=5520
+      MAX_PLAYERS=20
+      VIEW_DISTANCE=24
+      AUTH_MODE=authenticated
+      ENABLE_BACKUPS=true
+      BACKUP_FREQUENCY=30
+      DISABLE_SENTRY=true
+      USE_AOT_CACHE=true
+      ACCEPT_EARLY_PLUGINS=false
+      MIN_MEMORY=4G
+      MAX_MEMORY=16G
+      DOWNLOAD_ON_START=true
     volumes:
       - ./server-files:/home/hytale/server-files
     stdin_open: true
